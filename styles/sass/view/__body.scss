@@ -5,13 +5,16 @@ main{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    
     .box{
         display: flex;
         flex-direction: column;
         align-items: center;
+        
         .title{
             font-family: 'Dancing Script', cursive;
         }
+        
         .subTitle{
             font-family: 'Dancing Script', cursive;
         }
@@ -24,7 +27,8 @@ main{
         font-size: 1.5rem;
         
     }
-    .text{
-            
-        }
+    
+    .titleHide{
+        display: none;
+    }
 }

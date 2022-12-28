@@ -1,0 +1,12 @@
+@media screen and (min-width:768px){
+    main{
+        .title, .subTitle, .year, .parraph, .text{
+            display: none;
+        }
+        .titleHide{
+            display: block;
+            font-size: 2rem;
+        }
+    }
+    
+}

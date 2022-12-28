@@ -55,8 +55,22 @@ main .parraph {
   font-family: Pacifico, cursive;
   font-size: 1.5rem;
 }
+main .titleHide {
+  display: none;
+}
+
 :root {
   --main-color: #dadada;
+}
+
+@media screen and (min-width: 768px) {
+  main .title, main .subTitle, main .year, main .parraph, main .text {
+    display: none;
+  }
+  main .titleHide {
+    display: block;
+    font-size: 2rem;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
