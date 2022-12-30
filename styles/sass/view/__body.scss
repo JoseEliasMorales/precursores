@@ -1,16 +1,32 @@
 main{
     background: var(--main-color);
     height: 100vh;
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    
+    text-align: center;
+    .life{
+        display: none;
+    }
+    .carrito{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 20%;
+    }
+    .biblia{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 20%;
+    }
     .box{
         display: flex;
         flex-direction: column;
         align-items: center;
-        
+        position: relative;
         .title{
             font-family: 'Dancing Script', cursive;
         }
@@ -21,13 +37,38 @@ main{
         .year{
             font-size: 2rem;
         }
-    }
-    .parraph{
-        font-family: Pacifico, cursive;
-        font-size: 1.5rem;
         
     }
+    .box__text{
+        background-color: var(--textBox-color);
+        border-radius: 25px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 80%;
+        gap: 1rem;
+        .image{
+            border-radius: 25px 25px 0 0;
+        }
+        .box__textImage{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            width: 80%;
+            .parraph{
+                font-family: 'Lobster', cursive;
+                font-size: 1.5rem;
+            }
+            .text__secondary{
+                font-family: 'Fjalla One', sans-serif;
+            }
+            .heart{
+                width: 25%;
+            }
     
+        }
+    }
     .titleHide{
         display: none;
     }

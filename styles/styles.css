@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Pacifico&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Fjalla+One&family=Lobster&display=swap");
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -32,15 +32,33 @@ p, h1, h2, h3, h4, h5, h6 {
 main {
   background: var(--main-color);
   height: 100vh;
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  text-align: center;
+}
+main .life {
+  display: none;
+}
+main .carrito {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 20%;
+}
+main .biblia {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 20%;
 }
 main .box {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
 }
 main .box .title {
   font-family: "Dancing Script", cursive;
@@ -51,9 +69,34 @@ main .box .subTitle {
 main .box .year {
   font-size: 2rem;
 }
-main .parraph {
-  font-family: Pacifico, cursive;
+main .box__text {
+  background-color: var(--textBox-color);
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  gap: 1rem;
+}
+main .box__text .image {
+  border-radius: 25px 25px 0 0;
+}
+main .box__text .box__textImage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 80%;
+}
+main .box__text .box__textImage .parraph {
+  font-family: "Lobster", cursive;
   font-size: 1.5rem;
+}
+main .box__text .box__textImage .text__secondary {
+  font-family: "Fjalla One", sans-serif;
+}
+main .box__text .box__textImage .heart {
+  width: 25%;
 }
 main .titleHide {
   display: none;
@@ -61,15 +104,24 @@ main .titleHide {
 
 :root {
   --main-color: #dadada;
+  --textBox-color: #fff;
 }
 
 @media screen and (min-width: 768px) {
-  main .title, main .subTitle, main .year, main .parraph, main .text {
+  main .title, main .subTitle, main .year, main .parraph, main .text, main img, main .text__secondary, main .life {
     display: none;
   }
   main .titleHide {
     display: block;
     font-size: 2rem;
+  }
+}
+@media screen and (min-height: 851px) and (max-width: 767px) {
+  main .life {
+    display: block;
+    position: absolute;
+    top: 20px;
+    width: 25%;
   }
 }
 
